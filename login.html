@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>University Platform - Login</title>
+
+   <link rel="shortcut icon" href="UniPortalx-wVw.png" type="image/x-icon" />
+
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="logos"><img class="logoIm" src="UniPortalx-wVw-removebg-preview.png"></div>
+
+      <h1>Welcome</h1>
+      <p class="subtitle">Sign In to Your Account</p>
+
+      <!-- Toggle Buttons -->
+      <div class="role-toggle">
+        <button id="studentBtn" class="active">Student</button>
+        <button id="adminBtn">Administrator</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" action="coursefinder.html" method="get">
+        <label for="email" id="emailLabel">Email / Student ID</label>
+        <div class="input-group">
+          <input type="text" id="email" placeholder="Enter your email or ID" />
+        </div>
+
+        <label for="password">Password</label>
+        <div class="input-group password-group">
+          <input type="password" id="password" placeholder="Enter your password" />
+          <span class="toggle-password" id="togglePassword">👁</span>
+        </div>
+
+        <div class="options">
+          <label>
+            <input type="checkbox" /> Remember me
+          </label>
+          <a href="#">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Log In</button>
+      </form>
+
+    </div>
+
+    
+  </div>
+
+
+
+<script>
+  // --- ROLE TOGGLE ---
+  const studentBtn = document.getElementById("studentBtn");
+  const adminBtn = document.getElementById("adminBtn");
+  const emailLabel = document.getElementById("emailLabel");
+  const emailInput = document.getElementById("email");
+
+  let currentRole = "student"; // default
+
+  studentBtn.addEventListener("click", () => {
+    currentRole = "student";
+    studentBtn.classList.add("active");
+    adminBtn.classList.remove("active");
+    emailLabel.textContent = "Email / Student ID";
+    emailInput.placeholder = "Enter your email or ID";
+  });
+
+  adminBtn.addEventListener("click", () => {
+    currentRole = "admin";
+    adminBtn.classList.add("active");
+    studentBtn.classList.remove("active");
+    emailLabel.textContent = "Administrator Email";
+    emailInput.placeholder = "Enter your admin email";
+  });
+
+  // --- PASSWORD VISIBILITY TOGGLE ---
+  const togglePassword = document.getElementById("togglePassword");
+  const passwordInput = document.getElementById("password");
+
+  togglePassword.addEventListener("click", () => {
+    const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+    passwordInput.setAttribute("type", type);
+    togglePassword.textContent = type === "password" ? "👁" : "🙈";
+  });
+
+  // --- LOGIN VALIDATION ---
+  const loginForm = document.getElementById("loginForm");
+
+  loginForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // stop form from submitting
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
+    // ---- STUDENT VALIDATION ----
+    if (currentRole === "student") {
+      const validStudentID = "2500032104";   // example ID
+      const validStudentEmail = "2500032104@kluniversity.in"; // example email
+      const validStudentPassword = "123456"; // example password
+
+      if ((email === validStudentID || email === validStudentEmail) &&
+          password === validStudentPassword) {
+          
+        alert("Student Login Successful!");
+        window.location.href = "coursefinder.html"; // redirect
+      } else {
+        alert("Invalid Student ID/Email or Password");
+      }
+    }
+
+    // ---- ADMIN VALIDATION ----
+    if (currentRole === "admin") {
+      const validAdminEmail = "admin@uni.com";
+      const validAdminPassword = "admin123";
+
+      if (email === validAdminEmail && password === validAdminPassword) {
+        alert("Admin Login Successful!");
+        window.location.href = "admin-dashboard.html"; // you can change this
+      } else {
+        alert("Invalid Admin Email or Password");
+      }
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

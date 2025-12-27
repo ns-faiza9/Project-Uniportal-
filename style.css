@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box; /*When we add margin and padding, it does not affect the actual width and height of the element. */
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    font-family: 'Poppins', sens-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: blue;
+}
+a {
+    text-decoration: none; /*Which takes away the line under the href links */
+    color: white;
+}
+ul {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    width: 145px;
+    height: 40px; /*Logo size*/
+}
+/*Nav Bar*/
+.navbar {
+    background-color: black;
+    padding: 20px;
+}
+.navbar .container {
+    display: flex; /*Which goes side by side like in the same line of the logo of nav*/
+    justify-content: space-between; /*Pushes the links to the other side of the page upto the given width.*/
+    align-items: center;
+}
+/*To make the vertical links to horizontal*/
+.navbar .main-menu ul {
+    display: flex;
+}
+.navbar ul li a {
+    padding: 10px 20px; /*Right and Left spacing between the href links*/
+    display: block;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.navbar ul li a:hover {
+    color: skyblue;
+}
+.navbar ul li a i {
+    margin-right: 10px;
+}
+.navbar ul li:last-child {
+    margin-left: 10px;
+    color: blue;
+}
+hr {
+    color: white;
+}
+
+/*Hero*/
+.hero {
+    margin-bottom: 15px;
+}
+.hero .hero-content {
+    width: 70px;             /*Gives space between h1 and h4*/
+    margin-bottom: 20px;
+}
+.hero-text {
+    color: skyblue;
+}
+
+
+/* Utility classes*/
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*Buttons*/
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background: rgb(7, 7, 255);
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px; /*For smooth edges at the corner of the botton.*/
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+.boost {
+    display: inline-block;
+    background: black;
+    padding: 13px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.boost:hover {
+    opacity: 0.8;
+}
+
+/*Text Classes*/
+.text-xxl {
+    font-size: 70px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 80px 0 20px;
+    color: white;
+}
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 80px 0 20px;
+    color: white;
+}
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+    color: white;
+}
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+    color: white;
+}
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+    color: white;
+}  

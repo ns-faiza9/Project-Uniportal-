@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UniPortal - Courses</title>
+   <link rel="shortcut icon" href="UniPortalx-wVw.png" type="image/x-icon" />
+
+  <link rel="stylesheet" href="coursefinder.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+  integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="UniPortal.html"><img src="UniPortalWWE1-removebg-preview.png"></a>
+            </div>
+
+            <div class="main-menu">
+                <ul>
+                    <li><a href="UniPortal.html">Home</a></li>
+                    <li><a href="#">Premium</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="studentPro.html"><i class="fa-solid fa-circle-user fa-2x" style="color: #74C0FC;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br>
+ <!-- Main Layout -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="coursefinder.html">Courses</a>
+            <a href="schedule.html">My Schedule</a>
+            <a href="studentPro.html">User Profile</a>
+        </div>
+
+        <!-- Course List -->
+        <div class="courses">
+
+            <div class="course-box" onclick="showDetails('CS 101 - Intro to Programming', 'This course teaches basic programming using Python. Perfect for beginners with no coding experience.')">
+                <h3>CS 101 - Intro to Programming</h3>
+                <p>Dr. Vikram Singh</p>
+                <p>Mon/Wed/Fri • 10:00 AM</p>
+                <br>
+                <button class="btn">Add to Schedule</button>
+            </div>
+
+            <div class="course-box" onclick="showDetails('CS 241 - Data Structures', 'Learn arrays, linked lists, stacks, queues, trees, and graphs with hands-on practice.')">
+                <h3>CS 241 - Data Structures</h3>
+                <p>Dr Avinash Babu</p>
+                <p>Tue/Thu • 1:00 PM</p>
+                <br>
+                <button class="btn">Add to Schedule</button>
+            </div>
+
+            <div class="course-box" onclick="showDetails('MATH 221 - Calculus III', 'Topics include multivariable calculus, partial derivatives, and triple integrals.')">
+                <h3>MATH 221 - Calculus III</h3>
+                <p>Dr. Anya Sharma</p>
+                <p>Tue/Thu • 9:30 AM</p>
+                <br>
+                <button class="btn">Add to Schedule</button>
+            </div>
+
+        </div>
+
+        <!-- Right Side Details -->
+        <div class="details" id="detailsBox">
+            <h3>Select a course</h3>
+            <p>Course details will appear here.</p>
+        </div>
+
+    </div>
+
+    <script>
+        function showDetails(title, description) {
+            document.getElementById("detailsBox").innerHTML = `
+                <h3>${title}</h3>
+                <p>${description}</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>

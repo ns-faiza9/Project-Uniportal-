@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+.sidebar nav a {
+  font-family: 'Poppins', sens-serif;
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 0.6rem 0;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  color: white;
+}
+
+body {
+  font-family: 'Poppins', sens-serif;
+  background: blue;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #0066ff;
+}
+
+.topbar nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.save-btn {
+  background: #0066ff;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.user .name {
+  font-weight: 600;
+}
+
+.user .role {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Layout */
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 180px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            height: fit-content;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 8px 0;
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Course List */
+        .courses {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .course-box {
+            background: white;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .course-box:hover {
+            background: #d6e8ff;
+        }
+
+        /* Details Box */
+        .details {
+            width: 280px;
+            margin-left: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            height: fit-content;
+        }
+
+        .details h3 {
+            margin-top: 0;
+        }
+/*Nav Bar*/
+.navbar {
+    background-color: black;
+    padding: 15px;
+    margin-bottom: -30px;
+    margin-top: -10px;
+}
+.navbar .container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: -30px;
+}
+.navbar .main-menu ul {
+    display: flex;
+}
+.navbar ul li a {
+    padding: 10px 20px;
+    display: block;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.navbar ul li a:hover {
+    color: skyblue;
+}
+.navbar ul li a i {
+    margin-right: 10px;
+}
+
+.navbar ul li:last-child {
+    margin-left: 10px;
+    color: blue;
+}
+a {
+    text-decoration: none; 
+    color: white;
+}
+ul {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    width: 145px;
+    height: 40px; /*Logo size*/
+}
+/*hr {
+    color: white;
+}*/
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background: rgb(7, 7, 255);
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px; /*For smooth edges at the corner of the botton.*/
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+}
+.btn:hover {
+    opacity: 0.8;
+}

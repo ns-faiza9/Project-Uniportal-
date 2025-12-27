@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Weekly Schedule | UniPortal</title>
+   <link rel="shortcut icon" href="UniPortalx-wVw-removebg-preview.png" type="image/x-icon" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: blue;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 159px;
+      height: 100vh;
+      background: black;
+      padding: 20px;
+      box-shadow: 2px 0 8px white;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 0;
+      font-size: 15px;
+    }
+
+    .sidebar a:hover {
+      color: skyblue;
+    }
+
+    /* Main content */
+    .content {
+      margin-left: 260px;
+      padding: 25px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #e0e0e0;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    th {
+      background: #f7f9fc;
+      font-weight: bold;
+    }
+
+    /* Subject Cards */
+    .sub-box {
+      padding: 10px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      font-size: 13px;
+    }
+     /* Colors */
+    .brown { background: #b87832; }
+    .pink { background: #cf4aa8; }
+    .green { background: #61a85a; }
+    .blue { background: #44b4c6; }
+
+    /* Remove empty periods background */
+    .empty {
+      background: #ffffff;
+    }
+    .h2 {
+      color: white;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo"><img src="UniPortalx-wVw-removebg-preview.png"></h2>
+    <a href="UniPortal.html">Home</a>
+    <a href="coursefinder.html">Courses</a>
+    <a href="schedule.html">My Schedule</a>
+    <a href="studentPro.html">User Profile</a>
+    <a href="coursefinder.html">Back</a>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2 class="h2">My Weekly Schedule</h2>
+
+    <table>
+      <tr>
+        <th></th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+      </tr>
+
+      <!-- Period 1 -->
+      <tr>
+        <td>Period 1</td>
+        <td><div class="sub-box brown">LSE<br>C011</div></td>
+        <td><div class="sub-box pink">DM<br>C308</div></td>
+        <td><div class="sub-box pink">DM<br>C108</div></td>
+        <td><div class="sub-box brown">LSE<br>C107</div></td>
+        <td><div class="sub-box blue">FWD<br>C107</div></td>
+        <td class="empty"></td>
+      </tr>
+
+      <!-- Period 2 -->
+      <tr>
+        <td>Period 2</td>
+        <td><div class="sub-box brown">LSE<br>C011</div></td>
+        <td><div class="sub-box pink">DM<br>C308</div></td>
+        <td><div class="sub-box pink">DM<br>C108</div></td>
+        <td><div class="sub-box brown">LSE<br>C107</div></td>
+        <td><div class="sub-box blue">FWD<br>C107</div></td>
+        <td class="empty"></td>
+      </tr>
+
+      <!-- Period 3 -->
+      <tr>
+        <td>Period 3</td>
+        <td><div class="sub-box blue">FWD<br>C107</div></td>
+        <td><div class="sub-box green">JAVA<br>C107</div></td>
+        <td><div class="sub-box green">DTI<br>C011</div></td>
+        <td><div class="sub-box green">JAVA<br>C107</div></td>
+        <td class="empty"></td>
+        <td><div class="sub-box green">DTI<br>C107</div></td>
+      </tr>
+
+      <!-- Period 4 -->
+      <tr>
+        <td>Period 4</td>
+        <td><div class="sub-box blue">FWD<br>C011</div></td>
+        <td><div class="sub-box green">JAVA<br>C107</div></td>
+        <td><div class="sub-box green">DTI<br>C011</div></td>
+        <td><div class="sub-box green">JAVA<br>C107</div></td>
+        <td class="empty"></td>
+        <td><div class="sub-box green">DTI<br>C107</div></td>
+      </tr>
+
+      <!-- Period 5 -->
+      <tr>
+        <td>Period 5</td>
+        <td class="empty"></td>
+        <td><div class="sub-box blue">FWD<br>C007</div></td>
+        <td><div class="sub-box green">JAVA<br>C409</div></td>
+        <td><div class="sub-box blue">FWD<br>C408</div></td>
+        <td><div class="sub-box green">JAVA<br>C309</div></td>
+        <td><div class="sub-box green">JAVA<br>C007</div></td>
+      </tr>
+
+      <!-- Period 6 -->
+      <tr>
+        <td>Period 6</td>
+        <td class="empty"></td>
+        <td><div class="sub-box blue">FWD<br>C007</div></td>
+        <td><div class="sub-box green">JAVA<br>C409</div></td>
+        <td><div class="sub-box blue">FWD<br>C408</div></td>
+        <td><div class="sub-box green">JAVA<br>C309</div></td>
+        <td><div class="sub-box green">JAVA<br>C007</div></td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</body>
+</html>
